@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ExtraLab2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="起始站點" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zhM-I9-DVg">
+                                <rect key="frame" x="95" y="64" width="238" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="終點站點" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tNc-M5-tSe">
+                                <rect key="frame" x="95" y="103" width="238" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BTh-Pz-qc3">
+                                <rect key="frame" x="0.0" y="142" width="393" height="710"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="AxH-av-1S5"/>
+                                </connections>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="起點站" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mFH-Qg-KLR">
+                                <rect key="frame" x="15" y="64" width="70" height="34"/>
+                                <color key="backgroundColor" red="0.45882352941176469" green="0.25098039215686274" blue="0.60392156862745094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="K9r-WG-i85"/>
+                                    <constraint firstAttribute="height" constant="34" id="eqb-7x-LP5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
+                                <color key="textColor" red="0.30196078431372547" green="0.9882352941176471" blue="0.37254901960784315" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="終點站" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jx-1G-9um">
+                                <rect key="frame" x="15" y="103" width="70" height="34"/>
+                                <color key="backgroundColor" red="0.45882352941176469" green="0.25098039215686274" blue="0.60392156862745094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="pbg-S5-B7j"/>
+                                    <constraint firstAttribute="width" constant="70" id="vgD-zc-Zzc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.30196078431372547" green="0.9882352941176471" blue="0.37254901960784315" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6A-Tl-Oz9">
+                                <rect key="frame" x="343" y="64" width="35" height="73"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="hFH-0g-Nfc"/>
+                                </constraints>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow.2.squarepath" catalog="system">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" red="0.45882352941176469" green="0.25098039215686274" blue="0.60392156862745094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="strokeColor" red="0.45882352941176469" green="0.25098039215686274" blue="0.60392156862745094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" red="0.30196078431372547" green="0.9882352941176471" blue="0.37254901960784315" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="switchTextFieldBtnClk:" destination="BYZ-38-t0r" eventType="touchDown" id="6Ba-Xx-Xhf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lTm-Ng-4GT">
+                                <rect key="frame" x="15" y="142" width="94" height="35"/>
+                                <color key="backgroundColor" red="0.45882352941176469" green="0.25098039215686274" blue="0.60392156862745094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="站點搜尋">
+                                    <color key="baseForegroundColor" red="0.30196078431372547" green="0.9882352941176471" blue="0.37254901960784315" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" red="0.45882352941176469" green="0.25098039215686274" blue="0.60392156862745094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="searchBtnClick:" destination="BYZ-38-t0r" eventType="touchDown" id="yXZ-aR-Jm2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jgq-GD-PXS">
+                                <rect key="frame" x="250" y="142" width="128" height="35"/>
+                                <color key="backgroundColor" red="0.45882352941176469" green="0.25098039215686274" blue="0.60392156862745094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="路線規劃搜尋">
+                                    <color key="baseForegroundColor" red="0.30196078431372547" green="0.9882352941176471" blue="0.37254901960784315" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" red="0.45882352941176469" green="0.25098039215686274" blue="0.60392156862745094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="timeTableBtnClick:" destination="BYZ-38-t0r" eventType="touchDown" id="syC-pB-xkQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Udf-aQ-0NC">
+                                <rect key="frame" x="223.33333333333337" y="739" width="153.66666666666663" height="35"/>
+                                <color key="tintColor" systemColor="systemYellowColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="location.circle.fill" catalog="system" title="顯示目前位置">
+                                    <color key="baseForegroundColor" red="0.30196078431372547" green="0.9882352941176471" blue="0.37254901960784315" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" red="0.45882352941176469" green="0.25098039215686274" blue="0.60392156862745094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="currentLocationBtnClick:" destination="BYZ-38-t0r" eventType="touchDown" id="3nC-4G-29y"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="BTh-Pz-qc3" secondAttribute="bottom" id="1Fe-yn-zxl"/>
+                            <constraint firstItem="BTh-Pz-qc3" firstAttribute="top" secondItem="tNc-M5-tSe" secondAttribute="bottom" constant="5" id="AbX-uE-BUd"/>
+                            <constraint firstItem="zhM-I9-DVg" firstAttribute="top" secondItem="mFH-Qg-KLR" secondAttribute="top" id="FDM-kx-OEj"/>
+                            <constraint firstItem="4jx-1G-9um" firstAttribute="top" secondItem="mFH-Qg-KLR" secondAttribute="bottom" constant="5" id="GQd-0Y-I4p"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J6A-Tl-Oz9" secondAttribute="trailing" constant="15" id="GWG-uP-l59"/>
+                            <constraint firstItem="J6A-Tl-Oz9" firstAttribute="trailing" secondItem="Jgq-GD-PXS" secondAttribute="trailing" id="HEb-vS-o9S"/>
+                            <constraint firstItem="tNc-M5-tSe" firstAttribute="bottom" secondItem="4jx-1G-9um" secondAttribute="bottom" id="IZi-cz-EuK"/>
+                            <constraint firstItem="BTh-Pz-qc3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="MUD-5H-RCu"/>
+                            <constraint firstItem="Udf-aQ-0NC" firstAttribute="top" secondItem="Jgq-GD-PXS" secondAttribute="bottom" constant="562" id="N7d-8S-tXJ"/>
+                            <constraint firstItem="zhM-I9-DVg" firstAttribute="leading" secondItem="mFH-Qg-KLR" secondAttribute="trailing" constant="10" id="OV1-Zh-iTJ"/>
+                            <constraint firstItem="lTm-Ng-4GT" firstAttribute="leading" secondItem="4jx-1G-9um" secondAttribute="leading" id="PR3-to-iyQ"/>
+                            <constraint firstItem="tNc-M5-tSe" firstAttribute="top" secondItem="4jx-1G-9um" secondAttribute="top" id="Qgg-B0-96L"/>
+                            <constraint firstItem="mFH-Qg-KLR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="RMo-zZ-nI9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Udf-aQ-0NC" secondAttribute="trailing" constant="16" id="Sb0-ZD-rSR"/>
+                            <constraint firstItem="tNc-M5-tSe" firstAttribute="leading" secondItem="4jx-1G-9um" secondAttribute="trailing" constant="10" id="Wob-1b-9L5"/>
+                            <constraint firstItem="4jx-1G-9um" firstAttribute="top" secondItem="mFH-Qg-KLR" secondAttribute="bottom" constant="5" id="XlG-1T-jjE"/>
+                            <constraint firstItem="BTh-Pz-qc3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bbc-RZ-coK"/>
+                            <constraint firstItem="J6A-Tl-Oz9" firstAttribute="leading" secondItem="tNc-M5-tSe" secondAttribute="trailing" constant="10" id="huO-fd-QsH"/>
+                            <constraint firstItem="mFH-Qg-KLR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="hxg-k4-JPg"/>
+                            <constraint firstItem="4jx-1G-9um" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="jnb-5V-5th"/>
+                            <constraint firstItem="lTm-Ng-4GT" firstAttribute="top" secondItem="4jx-1G-9um" secondAttribute="bottom" constant="5" id="lhs-lp-OYO"/>
+                            <constraint firstItem="zhM-I9-DVg" firstAttribute="bottom" secondItem="mFH-Qg-KLR" secondAttribute="bottom" id="o7K-so-FH5"/>
+                            <constraint firstItem="Jgq-GD-PXS" firstAttribute="top" secondItem="tNc-M5-tSe" secondAttribute="bottom" constant="5" id="q9X-jb-Nep"/>
+                            <constraint firstItem="J6A-Tl-Oz9" firstAttribute="bottom" secondItem="4jx-1G-9um" secondAttribute="bottom" id="qVy-T5-pVQ"/>
+                            <constraint firstItem="J6A-Tl-Oz9" firstAttribute="leading" secondItem="zhM-I9-DVg" secondAttribute="trailing" constant="10" id="sVM-GZ-4mo"/>
+                            <constraint firstItem="J6A-Tl-Oz9" firstAttribute="top" secondItem="mFH-Qg-KLR" secondAttribute="top" id="tFO-O3-jQN"/>
+                            <constraint firstItem="tNc-M5-tSe" firstAttribute="leading" secondItem="4jx-1G-9um" secondAttribute="trailing" constant="10" id="xcU-Xg-ODa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="currentLocationBtn" destination="Udf-aQ-0NC" id="259-Pm-2Nd"/>
+                        <outlet property="endTextField" destination="tNc-M5-tSe" id="jUD-x9-62t"/>
+                        <outlet property="label1" destination="mFH-Qg-KLR" id="X9g-IO-jHQ"/>
+                        <outlet property="label2" destination="4jx-1G-9um" id="FnK-1D-xhF"/>
+                        <outlet property="mapView" destination="BTh-Pz-qc3" id="1tU-4y-XOx"/>
+                        <outlet property="searchBtn" destination="lTm-Ng-4GT" id="ftX-65-IUN"/>
+                        <outlet property="startTextField" destination="zhM-I9-DVg" id="MSj-ex-GUQ"/>
+                        <outlet property="switchBtn" destination="J6A-Tl-Oz9" id="ODr-TE-TEF"/>
+                        <outlet property="timeBtn" destination="Jgq-GD-PXS" id="VkY-Ei-nf7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9.9236641221374047" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.2.squarepath" catalog="system" width="128" height="88"/>
+        <image name="location.circle.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
