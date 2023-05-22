@@ -351,7 +351,7 @@ extension ViewController:MKMapViewDelegate{
                             do{
                                 myRestaurantData = try JSONDecoder().decode(restaurantData.self, from: data!)
                             }catch{
-                                print("錯誤:\(error)")
+                                print("錯誤！:\(error)")
                             }
                             let VC = restaurantTableViewController()
                             VC.lat = annotation.coordinate.latitude
