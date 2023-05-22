@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-ExtraLab2/Pods-ExtraLab2-frameworks.sh
+${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework
+${BUILT_PRODUCTS_DIR}/Toast/Toast.framework

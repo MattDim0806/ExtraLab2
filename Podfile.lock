@@ -1,0 +1,20 @@
+PODS:
+  - SwiftyJSON (5.0.1)
+  - Toast (4.0.0)
+
+DEPENDENCIES:
+  - SwiftyJSON
+  - Toast
+
+SPEC REPOS:
+  trunk:
+    - SwiftyJSON
+    - Toast
+
+SPEC CHECKSUMS:
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
+  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
+
+PODFILE CHECKSUM: 7afad44789599cf732f4933e4017e06028a74bc8
+
+COCOAPODS: 1.12.1
