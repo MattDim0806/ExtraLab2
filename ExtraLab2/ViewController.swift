@@ -106,13 +106,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var label1: UILabel!
     var location:CLLocationManager? = nil
     var accessToken : String!
-    var accessToken1 : String! //"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJER2lKNFE5bFg4WldFajlNNEE2amFVNm9JOGJVQ3RYWGV6OFdZVzh3ZkhrIn0.eyJleHAiOjE2ODQ3NTg1MDAsImlhdCI6MTY4NDY3MjEwMCwianRpIjoiYzA4ZTA2M2UtM2U4NC00YzVlLWE0MTMtNjcyNjQ2YTNjODcyIiwiaXNzIjoiaHR0cHM6Ly90ZHgudHJhbnNwb3J0ZGF0YS50dy9hdXRoL3JlYWxtcy9URFhDb25uZWN0Iiwic3ViIjoiMDkxYWFmODAtMGQ4ZC00N2RiLTg0ZDctMTQ4ZTAzMGViMTYwIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoidDEwODM2MDEyNS1lYTE4NGEzMC1hZjFjLTQwZTQiLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbInN0YXRpc3RpYyIsInByZW1pdW0iLCJtYWFzIiwiYWR2YW5jZWQiLCJ2YWxpZGF0b3IiLCJoaXN0b3JpY2FsIiwiYmFzaWMiXX0sInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsInVzZXIiOiI5ZTQxZTFkYyJ9.fkv1ncOEsqMT3Ou7DIRlDdSgWrFFeJlnRNg9PjkZVsHoV51QwIlElUKkfw6sv_5hgtRSp1coIAYpAP-sTtx3-1l32DVE-fBIL0e27JWPmp4F7N-q-UDZGWYwCwZUpMpWQjkWa9P-3NhRPrbxB1u55D4oeXPmOOPnPE7DVkk10GRDc0Jt0jow9dWm7CrrnxjH4ZXZS7MCYt1b6_MyVBdLqZolmuWeRpk-pu-F0uHBM-FKHBuT5XMleqW_D9XWmJ4EKJJ-8Dq_XFyMMNzsmFk8mV9SQxmjO9RGVULzZCKdLjRLPP0e-xTEdPgp6-pJcCWoxwErXSNWQiLckQLi4Mb79A"
-    
+    var accessToken1 : String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         startTextField.delegate = self
         endTextField.delegate = self
+        
        //grantToken
         let url = URL(string: "https://tdx.transportdata.tw/auth/realms/TDXConnect/protocol/openid-connect/token")!
         var request = URLRequest(url: url)
@@ -169,7 +169,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         let url = URL(string: "https://tdx.transportdata.tw/api/basic/v2/Rail/THSR/Station?%24top=30&%24format=JSON")!
         var request = URLRequest(url: url)
         request.setValue("Bearer \(accessToken1!)", forHTTPHeaderField: "authorization")
-        //request.setValue("Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJER2lKNFE5bFg4WldFajlNNEE2amFVNm9JOGJVQ3RYWGV6OFdZVzh3ZkhrIn0.eyJleHAiOjE2ODQzMjUzMjMsImlhdCI6MTY4NDIzODkyMywianRpIjoiOGQzOGFlMDMtODA1MC00MWZkLWIwYjUtOGUyNjE4ZTdjODk1IiwiaXNzIjoiaHR0cHM6Ly90ZHgudHJhbnNwb3J0ZGF0YS50dy9hdXRoL3JlYWxtcy9URFhDb25uZWN0Iiwic3ViIjoiMDkxYWFmODAtMGQ4ZC00N2RiLTg0ZDctMTQ4ZTAzMGViMTYwIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoidDEwODM2MDEyNS1lYTE4NGEzMC1hZjFjLTQwZTQiLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbInN0YXRpc3RpYyIsInByZW1pdW0iLCJtYWFzIiwiYWR2YW5jZWQiLCJ2YWxpZGF0b3IiLCJoaXN0b3JpY2FsIiwiYmFzaWMiXX0sInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsInVzZXIiOiI5ZTQxZTFkYyJ9.dMYJSdy5bn7ZWyjxYNsY1I56ZVSZnv_NMTuA69eeHcOLPOzAdIWYh0dDIHtAQqbidp109LlX4nYYsX4SDSd031qdoLpRU5Sc705GwdyFAfk3VI43AB7_PW31jPORE61dSNS--a5Rpl09q1KT4OBTcBoYzT1kNx5Rh_TdTpNkdFdYOUPrMza_xffiriwl17uMvv3V6ICCahOaYdtNf7X6d6vTBsqSsuefa7eyaHJI0Yj7YM2HGq7L2tNQciEy_G1HYsFJAvOCfpbPdHhI2E3EzSnBA_fi3uxBHXBRoMGXPk5cCEVbZ-5K1_KYj4veMJdDcBoV1V2oJvn8Lw0RUrEIrQ", forHTTPHeaderField: "authorization")
         request.httpMethod = "GET"
         let task = URLSession.shared.dataTask(with: request){ data, response, error in
             if(error != nil){
@@ -187,13 +186,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     func getTimeTableApi(startID: String, endID: String){
         print("起點車站ID：" + startID)
-        print("終點車站ID" + endID)
+        print("終點車站ID：" + endID)
         let currentDate = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         let dateString = dateFormatter.string(from: currentDate)
         print("今日日期：" + dateString) // 输出：2023-05-20
-        //let url = URL(string: "https://tdx.transportdata.tw/api/basic/v2/Rail/THSR/DailyTimetable/OD/" + startID + "/to/" + endID + "/2023-05-20?%24top=30&%24format=JSON")!
         let url = URL(string: "https://tdx.transportdata.tw/api/basic/v2/Rail/THSR/DailyTimetable/OD/" + startID + "/to/" + endID + "/" + dateString + "?%24top=30&%24format=JSON")!
         print(url)
         var request = URLRequest(url: url)
@@ -206,9 +204,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             else{
                 DispatchQueue.main.async {
                     myTimeTableData = try! JSONDecoder().decode([TimeTableData].self, from: data!)
-                    let VC = timeTableViewController()
-                    VC.accessToken1 = self.accessToken1
-                    self.present(VC, animated: true)
+                    let timeTableVC = timeTableViewController(nibName: "timeTableViewController", bundle: nil)
+                    timeTableVC.accessToken1 = self.accessToken1
+                            // 將目標視圖控制器推入堆疊
+                    
+                    self.navigationController!.pushViewController(timeTableVC, animated: true)
                 }
             }
         }
@@ -270,7 +270,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                         }
                         flag = 1
                         getTimeTableApi(startID: myStationData[startIndex].StationID, endID: myStationData[endIndex].StationID)
-                        //present(VC, animated: true)
                     }
                 }
             }
@@ -279,6 +278,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             view.makeToast("請檢查站點名稱是否正確！")
         }
     }
+    
     @IBAction func searchBtnClick(_ sender: Any) {
         let VC = searchPopUpViewController()
         VC.delegate = self

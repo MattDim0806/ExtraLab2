@@ -77,7 +77,7 @@ class timeTableViewController: UIViewController {
                     VC.startStation = startStation
                     VC.endStation = endStation
                     VC.trainNo = trainNo
-                    self.present(VC, animated: true)
+                    self.navigationController!.pushViewController(VC,animated: true)
                 }
             }
         }

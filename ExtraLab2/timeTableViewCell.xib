@@ -10,15 +10,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="106" id="KGk-i7-Jjw" customClass="timeTableViewCell" customModule="ExtraLab2" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="393" height="106"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="131" id="KGk-i7-Jjw" customClass="timeTableViewCell" customModule="ExtraLab2" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="131"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="393" height="106"/>
+                <rect key="frame" x="0.0" y="0.0" width="393" height="131"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="XMv-7o-mhk">
-                        <rect key="frame" x="43.333333333333343" y="25" width="306.33333333333326" height="80"/>
+                        <rect key="frame" x="53.333333333333343" y="25" width="286.33333333333326" height="80"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="y5n-0O-z0k">
                                 <rect key="frame" x="0.0" y="0.0" width="60" height="80"/>
@@ -31,27 +31,27 @@
                                             <constraint firstAttribute="width" constant="60" id="SbQ-dm-NZY"/>
                                             <constraint firstAttribute="height" constant="80" id="m4t-pT-bd9"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
                                         <color key="textColor" red="0.30196078430000001" green="0.98823529409999999" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wxp-jf-GLt">
-                                <rect key="frame" x="87" y="0.0" width="53.333333333333343" height="80"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <rect key="frame" x="87" y="0.0" width="45.666666666666657" height="80"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00分鐘" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ogq-ju-6Pa">
-                                <rect key="frame" x="167.33333333333331" y="0.0" width="58.666666666666657" height="80"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <rect key="frame" x="159.66666666666666" y="0.0" width="54" height="80"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="48L-62-xxP">
-                                <rect key="frame" x="252.99999999999997" y="0.0" width="53.333333333333343" height="80"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <rect key="frame" x="240.66666666666666" y="0.0" width="45.666666666666657" height="80"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -72,7 +72,7 @@
                 <outlet property="driveTime" destination="Ogq-ju-6Pa" id="09x-m9-two"/>
                 <outlet property="trainInfo" destination="fjv-5F-Er6" id="CTn-CF-GW7"/>
             </connections>
-            <point key="canvasLocation" x="93.89312977099236" y="9.1549295774647899"/>
+            <point key="canvasLocation" x="93.89312977099236" y="17.95774647887324"/>
         </tableViewCell>
     </objects>
 </document>
